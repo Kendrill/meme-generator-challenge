@@ -30,28 +30,25 @@ h2, h4, p {
 }
 
 #bottom-section {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 55%;
   color: white;
 }
 
 #box-left {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
   background-color: #2ab2af;
   padding: 25px;
   font-size: 0.9rem;
+  flex-basis: 50%;
 }
 
 #box-right {
-  display: block;
-  width: 100%;
   height: 100%;
   background-color: #2EBFBD;
-  vertical-align: top;
   padding: 25px;
+  flex-basis: 50%;
 }
 
 #top-section h2 {
@@ -86,21 +83,20 @@ button:hover {
 
 #price-container {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: raw;
+  align-items: center;
 }
 
 #price {
-  display: inline-block;
   font-weight: 700;
   font-size: 1.4rem;
 }
 
 #price-frequency {
-  display: inline-block;
-  position: relative;
-  top: -3px;
   font-size: 0.8rem;
   opacity: 0,7;
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 #box-left h4 {
@@ -119,12 +115,8 @@ ul {
       width: 550px;
       height: 400px;
   }
-  
-  #box-right {
-    display: inline-block;
-  }
-  
-  #box-left, #box-right {
-    width: 50%;
+
+  #bottom-section {
+    flex-direction: row;
   }
 }
